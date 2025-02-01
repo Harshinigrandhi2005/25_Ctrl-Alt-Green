@@ -1,12 +1,197 @@
+/* Base styling for the body */
 body {
-  background-color: #d4e157;
+  background: linear-gradient(180deg, #ffffff, #b3db87); 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ensures no scrolling */
 }
 
+
+/* Basic Styling for ScrapCycle Text */
+.scrapcycle {
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3c763d; /* Darker green for text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: textAnimation 3s forwards;
+}
+
+/* Animation for showing text letter by letter */
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scrapcycle span {
+  font-size: 4rem; /* for the large letters S and C */
+  opacity: 0;
+  animation: letterFade 2s forwards;
+}
+
+.scrapcycle span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.scrapcycle span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.scrapcycle span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.scrapcycle span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.scrapcycle span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.scrapcycle span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes letterFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Leaf Flying Animation */
+@keyframes leafFlying {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(100px, -100px) rotate(45deg);
+  }
+  50% {
+    transform: translate(-150px, 200px) rotate(90deg);
+  }
+  75% {
+    transform: translate(200px, 100px) rotate(180deg);
+  }
+  100% {
+    transform: translate(-100px, -200px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.logo-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem; /* Increased size for better visibility */
+  font-weight: bold;
+  text-align: center;
+}
+
+.logo-text {
+  display: inline-block;
+}
+
+.letter {
+  display: inline-block;
+  font-family: "Arial", sans-serif; /* You can choose a different font */
+}
+
+/* Dashboard Styling */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f8e9; /* Light green background */
+  min-height: 100vh;
+}
+
+.loading {
+  font-size: 2rem;
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+}
+
+/* .chart {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+} */
+
+h3 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #388e3c;
+  margin-bottom: 20px;
+}
+
+
+/* Container for pie chart */
+.pie-chart-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 35%;
+  min-width: 250px;
+  overflow: hidden;
+}
+
+/* Container for individual graphs (bar and line) */
+.bar-graph-container,
+.line-graph-container {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 300px;  /* Restrict height to avoid overflowing */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Title Styling for better spacing */
+h2 {
+  text-align: center;
+  color: #388e3c;
+  margin-bottom: 1rem;
+}
+
+/* App and Form Containers */
 .app-container {
   display: flex;
   justify-content: center;
@@ -73,4 +258,49 @@ input {
 .tagline {
   font-size: 0.8rem;
   color: gray;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;  /* Stack the charts vertically on smaller screens */
+    align-items: center;
+  }
+
+  .charts-container {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .pie-chart-container {
+    max-width: 80%; /* Pie chart should take a larger width */
+    margin-bottom: 2rem;
+  }
+
+  .bar-graph-container,
+  .line-graph-container {
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bar-graph-container,
+  .line-graph-container {
+    max-width: 90%;
+  }
+
+  .pie-chart-container {
+    max-width: 90%;
+  }
+}
+
+/* Common Logo Styling */
+.common-logo {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  width: 50px; /* Adjust size */
+  height: auto;
+  z-index: 1000; /* Ensures it stays on top */
 }

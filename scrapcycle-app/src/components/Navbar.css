@@ -1,0 +1,108 @@
+/* Navbar Styling - Navbar.css */
+
+/* General Styling for Navbar */
+.navbar {
+  width: 100%;
+  background-color: #388e3c; /* Green background */
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Navbar container to organize content */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Logo styling */
+.logo h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+/* Navbar Links */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li {
+  margin-right: 20px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #f7f7f7; /* Light color on hover */
+}
+
+/* User action buttons (Login, Sign Up) */
+.user-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn {
+  background-color: #ffffff;
+  color: #388e3c;
+}
+
+.signup-btn {
+  background-color: #f7f7f7;
+  color: #388e3c;
+}
+
+.login-btn:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links ul li {
+    margin-bottom: 10px;
+  }
+
+  .user-actions {
+    margin-top: 10px;
+  }
+}

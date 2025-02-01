@@ -1,0 +1,75 @@
+/* Dashboard Styling - Dashboard.css */
+
+/* Main container for dashboard */
+.dashboard {
+    padding: 20px;
+    margin-top: 80px; /* To avoid overlap with the navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Title Styling */
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #388e3c;
+  }
+  
+  /* Container for both left and right charts */
+  .charts-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Ensures the charts wrap on smaller screens */
+  }
+  
+  /* Left Section (Bar Chart and Line Chart) */
+  .left-charts {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-right: 20px;
+  }
+  
+  /* Individual Chart Containers */
+  .bar-chart-container, .line-chart-container {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .bar-chart-container h3, .line-chart-container h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #388e3c;
+    margin-bottom: 15px;
+  }
+  
+  /* Right Section (Pie Chart) */
+  .right-chart {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px; /* Adjusted to create some space */
+  }
+  
+  /* Responsiveness: Mobile View */
+  @media (max-width: 768px) {
+    .charts-container {
+      flex-direction: column;
+    }
+  
+    .left-charts, .right-chart {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .bar-chart-container, .line-chart-container {
+      width: 100%;
+    }
+  }
