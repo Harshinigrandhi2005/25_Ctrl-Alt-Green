@@ -34,7 +34,7 @@ export default function ScrapForm() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/scrap/add', form, {
+      const response = await axios.post('http://localhost:5000/api/scrap', form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(response.data.message);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Marketplace.css";
+import "./MarketPlace.css";
 
 export default function Marketplace() {
   const [scrapItems, setScrapItems] = useState([]);
