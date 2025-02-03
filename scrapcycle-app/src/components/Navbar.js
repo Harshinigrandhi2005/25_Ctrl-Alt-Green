@@ -1,4 +1,3 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 import './Navbar.css'; // Import the CSS file for styling
@@ -20,15 +19,16 @@ function Navbar() {
             <li><Link to="/">Sell Scrap</Link></li>
             <li><Link to="/marketplace">Market Place</Link></li>
             <li><Link to="/metal-prices">Metal Prices</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/destination">Destination</Link></li>
+            <li><Link to="/inventory">Inventory</Link></li> {/* Added Inventory link */}
           </ul>
         </div>
 
-        {/* Right section for user actions (e.g., login or profile) */}
+        {/* Right section for user actions (e.g., login or profile)
         <div className="user-actions">
           <button className="login-btn">Login</button>
           <button className="signup-btn">Sign Up</button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

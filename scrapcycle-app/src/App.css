@@ -4,17 +4,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  font-family: Georgia;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Ensures no scrolling */
+  overflow: auto; /* Ensures no scrolling */
 }
 
 
 /* Basic Styling for ScrapCycle Text */
 .scrapcycle {
-  font-family: 'Arial', sans-serif;
+  font-family: Georgia;
   font-size: 3rem;
   font-weight: bold;
   color: #3c763d; /* Darker green for text */

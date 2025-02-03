@@ -1,0 +1,112 @@
+/* General container for the inventory page */
+.inventory-container {
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.inventory-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #2c6b2f;
+    margin-bottom: 30px;
+}
+
+/* Main grid layout - 3 sections */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensuring exactly 3 columns */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 24px;
+    color: #2c6b2f;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Common styles for each section */
+.grid-item {
+    background-color: #ffffff;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Material Cards */
+.material-card {
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Highlight low stock items */
+.material-card.low-stock {
+    border-color: #e74c3c;
+    background-color: #ffebe6;
+}
+
+/* Material name */
+.material-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2c6b2f;
+}
+
+/* Material quantity and threshold info */
+.material-quantity,
+.material-threshold {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Threshold bar container */
+.threshold-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Threshold progress */
+.threshold-progress {
+    height: 100%;
+    background-color: #27ae60;
+    border-radius: 5px;
+}
+
+/* Profit & Loss Section */
+.profit-loss-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profit {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.loss {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Storage section */
+.storage-info {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c6b2f;
+    margin-top: 10px;
+}

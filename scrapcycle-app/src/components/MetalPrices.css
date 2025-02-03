@@ -2,7 +2,7 @@
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 20px;
-  background-color: #f4f4f9;
+  background-color: #66cb73;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -28,20 +28,20 @@ table th, table td {
 
 table th {
   background-color: #4CAF50;
-  color: white;
+  color: rgb(5, 26, 3);
   font-weight: bold;
 }
 
 table td {
-  background-color: #fff;
+  background-color: #97e775;
 }
 
 table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #7acc6c;
 }
 
 table tr:hover {
-  background-color: #e2f0e1;
+  background-color: #7fe678;
 }
 
 .metal-prices .loading {

@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import ScrapForm from "./components/Scrapform"; // Fixed capitalization
 import Marketplace from "./components/MarketPlace"; // Fixed capitalization
 import MetalPrices from "./components/MetalPrices"; // Ensure this file exists
+import Destination from "./components/Destination";
+import Inventory from './components/Inventory'; // Import Inventory page
 
 function App() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -33,9 +35,7 @@ function App() {
   }, []);
 
   return (
-    
     <Router>
-      
       <div className="App">
         {animationComplete ? (
           <>
@@ -47,6 +47,8 @@ function App() {
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/metal-prices" element={<MetalPrices />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/destination" element={<Destination />} />
+                <Route path="/inventory" element={<Inventory />} /> {/* Add route for Inventory */}
               </Routes>
             </div>
           </>
